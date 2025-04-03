@@ -22,7 +22,7 @@ app.get('/serpsearch', async (req, res) => {
     }
 
     try {
-        const response = await axios.get('https://serpapi.com/search', {
+        const response = await axios.get('https://serpapi.com/search.json?', {
             params: {
                 api_key: SERPAPI_KEY,
                 q: query,

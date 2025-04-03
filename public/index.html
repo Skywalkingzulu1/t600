@@ -497,7 +497,7 @@
         // Web search integration using the backend endpoint to avoid CORS issues
         async function performWebSearch(query) {
             try {
-                const response = await fetch(`${config.serpApiUrl}?q=${encodeURIComponent(query)}&api_key=${config.serpApiKey}`);
+                const response = await fetch(`${config.serpApiUrl}q=${encodeURIComponent(query)}&api_key=${config.serpApiKey}`);
                 const data = await response.json();
                 return data.organic_results || [];
             } catch (error) {
